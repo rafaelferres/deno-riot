@@ -12,4 +12,11 @@ enum Region {
     TR1 = "tr1"
 }
 
-export { Region };
+enum LeadboardRegion {
+    Americas = "americas",
+    Asia = "asia",
+    Europe = "europe",
+    Sea = "sea"
+}
+
+export { Region, LeadboardRegion };
