@@ -1,11 +1,23 @@
 
-import { Region } from '../constants.ts';
+import { Region, Languages } from '../constants.ts';
 
 class Champion{
     private apiKey: string;
 
     constructor(_apiKey: string){
         this.apiKey = _apiKey;
+    }
+
+    public champions(language: Languages){
+        let _url = `http://ddragon.leagueoflegends.com/cdn/10.11.1/data/${language}/champion.json`;
+        let _options = {
+            method: "GET"
+        };
+
+        let res = fetch(_url, _options)
+                    .then(this.handleResponse)
+                    .catch(this.errorService);
+        return res;
     }
 
     public championRotations(region: Region){

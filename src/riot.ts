@@ -3,6 +3,7 @@ import { Spectator } from './spectator/spectator.ts';
 import { Ranked } from './ranked/ranked.ts';
 import { Status } from './status/status.ts';
 import { Champion } from './champion/champion.ts';
+import { ChampionMastery } from './champion/championMastery.ts';
 
 class Riot{
     private apiKey : string;
@@ -11,6 +12,7 @@ class Riot{
     public ranked: Ranked;
     public status: Status;
     public champion: Champion;
+    public championMastery: ChampionMastery;
 
     constructor(_apiKey: string){
         this.apiKey = _apiKey;
@@ -19,6 +21,7 @@ class Riot{
         this.ranked = new Ranked(this.apiKey);
         this.status = new Status(this.apiKey);
         this.champion = new Champion(this.apiKey);
+        this.championMastery = new ChampionMastery(this.apiKey);
     }
 }
 
