@@ -7,7 +7,7 @@ class Summoner {
         this.apiKey = _apiKey;
     }
 
-    public byName(summonerName: string, region: Region){
+    public getSummonerByName(summonerName: string, region: Region){
         let _url = `https://${region}.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}`;
         let _options = {
             method: "GET",
@@ -22,7 +22,7 @@ class Summoner {
         return res;
     }
 
-    public byAccountId(encryptedAccountId: string, region: Region){
+    public getSummonerByAccountId(encryptedAccountId: string, region: Region){
         let _url = `https://${region}.api.riotgames.com/lol/summoner/v4/summoners/by-account/${encryptedAccountId}`;
         let _options = {
             method: "GET",
@@ -37,7 +37,7 @@ class Summoner {
         return res;
     }
 
-    public byPuuid(encryptedPUUID: string, region: Region){
+    public getSummonerByPuuid(encryptedPUUID: string, region: Region){
         let _url = `https://${region}.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${encryptedPUUID}`;
         let _options = {
             method: "GET",
@@ -52,7 +52,7 @@ class Summoner {
         return res;
     }
 
-    public byEncryptedSummonerId(encryptedSummonerId: string, region: Region){
+    public getSummonerByEncryptedSummonerId(encryptedSummonerId: string, region: Region){
         let _url = `https://${region}.api.riotgames.com/lol/summoner/v4/summoners/${encryptedSummonerId}`;
         let _options = {
             method: "GET",

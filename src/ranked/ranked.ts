@@ -7,7 +7,7 @@ class Ranked{
         this.apiKey = _apiKey;
     }
 
-    public leaderboards(region: LeadboardRegion){
+    public getLeaderboards(region: LeadboardRegion){
         let _url = `https://${region}.api.riotgames.com/lor/ranked/v1/leaderboards`;
         let _options = {
             method: "GET",

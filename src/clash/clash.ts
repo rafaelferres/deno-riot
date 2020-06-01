@@ -1,14 +1,14 @@
 import { Region } from '../constants.ts';
 
-class ChampionMastery {
+class Clash {
     private apiKey: string;
 
     constructor(_apiKey: string){
         this.apiKey = _apiKey;
     }
 
-    public getByEncryptedSummonerId(encryptedSummonerId: string, region: Region){
-        let _url = `https://${region}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/${encryptedSummonerId}`;
+    public getPlayer(summonerId: string, region: Region){
+        let _url = `https://${region}.api.riotgames.com/lol/clash/v1/players/by-summoner/${summonerId}`;
         let _options = {
             method: "GET",
             headers: {
@@ -22,8 +22,8 @@ class ChampionMastery {
         return res;
     }
 
-    public getByEncryptedSummonerIdChampionId(encryptedSummonerId: string, championId: number, region: Region){
-        let _url = `https://${region}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/${encryptedSummonerId}/by-champion/${championId}`;
+    public getTeamById(teamId: string, region: Region){
+        let _url = `https://${region}.api.riotgames.com/lol/clash/v1/teams/${teamId}`;
         let _options = {
             method: "GET",
             headers: {
@@ -37,8 +37,38 @@ class ChampionMastery {
         return res;
     }
 
-    public getScoreByEncryptedSummonerId(encryptedSummonerId: string, region: Region){
-        let _url = `https://${region}.api.riotgames.com/lol/champion-mastery/v4/scores/by-summoner/${encryptedSummonerId}`;
+    public getAllTournaments(region: Region){
+        let _url = `https://${region}.api.riotgames.com/lol/clash/v1/tournaments`;
+        let _options = {
+            method: "GET",
+            headers: {
+                "X-Riot-Token": this.apiKey,
+            },
+        };
+
+        let res = fetch(_url, _options)
+                    .then(this.handleResponse)
+                    .catch(this.errorService);
+        return res;
+    }
+
+    public getTournamentsByTeamId(teamId: string, region: Region){
+        let _url = `https://${region}.api.riotgames.com/lol/clash/v1/tournaments/by-team/${teamId}`;
+        let _options = {
+            method: "GET",
+            headers: {
+                "X-Riot-Token": this.apiKey,
+            },
+        };
+
+        let res = fetch(_url, _options)
+                    .then(this.handleResponse)
+                    .catch(this.errorService);
+        return res;
+    }
+
+    public getTournamentById(tournamentId: string, region: Region){
+        let _url = `https://${region}.api.riotgames.com/lol/clash/v1/tournaments/${tournamentId}`;
         let _options = {
             method: "GET",
             headers: {
@@ -66,4 +96,4 @@ class ChampionMastery {
     }
 }
 
-export { ChampionMastery } ;
+export { Clash } ;

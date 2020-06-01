@@ -8,7 +8,7 @@ class Champion{
         this.apiKey = _apiKey;
     }
 
-    public champions(language: Languages){
+    public getChampions(language: Languages){
         let _url = `http://ddragon.leagueoflegends.com/cdn/10.11.1/data/${language}/champion.json`;
         let _options = {
             method: "GET"
@@ -20,7 +20,7 @@ class Champion{
         return res;
     }
 
-    public championRotations(region: Region){
+    public getChampionRotations(region: Region){
         let _url = `https://${region}.api.riotgames.com/lol/platform/v3/champion-rotations`;
         let _options = {
             method: "GET",

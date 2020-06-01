@@ -8,7 +8,7 @@ class Status{
         this.apiKey = _apiKey;
     }
 
-    public shardData(region: Region){
+    public getShardData(region: Region){
         let _url = `https://${region}.api.riotgames.com/lol/status/v3/shard-data`;
         let _options = {
             method: "GET",

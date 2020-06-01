@@ -53,8 +53,16 @@ riot.championMastery.byEncryptedSummonerIdChampionId("mMJZj2mbolYcL0NX1JJIM78V7i
 
 riot.championMastery.scoreByEncryptedSummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) =>{
     console.log(data);
-});*/
+});
 
 riot.exp.getAllLeague(Queue.RankedSolo5x5, Tier.Gold, Division.III).then((data) => {
     console.log(data);
 })
+
+riot.clash.getPlayer("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) => {
+    console.log(data);
+});
+
+riot.clash.getAllTournaments(Region.BR1).then((data) => {
+    console.log(data);
+});*/

@@ -7,8 +7,8 @@ class Exp {
         this.apiKey = _apiKey;
     }
 
-    public getAllLeague(queue: Queue, tier: Tier, division: Division, page?: number){
-        let _url = `https://br1.api.riotgames.com/lol/league-exp/v4/entries/${queue}/${tier}/${division}`;
+    public getAllLeague(region: Region, queue: Queue, tier: Tier, division: Division, page?: number){
+        let _url = `https://${region}.api.riotgames.com/lol/league-exp/v4/entries/${queue}/${tier}/${division}`;
         _url = page ? _url + `?page=${page}` : _url;
         let _options = {
             method: "GET",

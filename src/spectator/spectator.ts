@@ -7,7 +7,7 @@ class Spectator{
         this.apiKey = _apiKey;
     }
 
-    public byEncryptedSummonerId(encryptedSummonerId: string, region: Region){
+    public getCurrentGameByEncryptedSummonerId(encryptedSummonerId: string, region: Region){
         let _url = `https://${region}.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/${encryptedSummonerId}`;
         let _options = {
             method: "GET",
@@ -22,7 +22,7 @@ class Spectator{
         return res;
     }
 
-    public featuredGames(region: Region){
+    public getFeaturedGames(region: Region){
         let _url = `https://${region}.api.riotgames.com/lol/spectator/v4/featured-games`;
         let _options = {
             method: "GET",

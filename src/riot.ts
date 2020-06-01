@@ -5,6 +5,7 @@ import { Status } from './status/status.ts';
 import { Champion } from './champion/champion.ts';
 import { ChampionMastery } from './champion/championMastery.ts';
 import { Exp } from './exp/exp.ts';
+import { Clash } from './clash/clash.ts';
 
 class Riot{
     private apiKey : string;
@@ -15,6 +16,7 @@ class Riot{
     public champion: Champion;
     public championMastery: ChampionMastery;
     public exp: Exp;
+    public clash: Clash;
 
     constructor(_apiKey: string){
         this.apiKey = _apiKey;
@@ -25,6 +27,7 @@ class Riot{
         this.champion = new Champion(this.apiKey);
         this.championMastery = new ChampionMastery(this.apiKey);
         this.exp = new Exp(this.apiKey);
+        this.clash = new Clash(this.apiKey);
     }
 }
 
