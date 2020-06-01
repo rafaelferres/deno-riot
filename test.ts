@@ -1,4 +1,4 @@
-import { Riot, Region, LeadboardRegion, Languages } from './mod.ts';
+import { Riot, Region, LeadboardRegion, Languages, Queue, Tier, Division} from './mod.ts';
 
 let riot = new Riot("RGAPI-7b205af6-82a4-4868-85dd-a330d7360db5");
 
@@ -49,8 +49,12 @@ riot.championMastery.byEncryptedSummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E
 
 riot.championMastery.byEncryptedSummonerIdChampionId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", 141, Region.BR1).then((data) => {
     console.log(data);
-});*/
+});
 
 riot.championMastery.scoreByEncryptedSummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) =>{
+    console.log(data);
+});*/
+
+riot.exp.getAllLeague(Queue.RankedSolo5x5, Tier.Gold, Division.III).then((data) => {
     console.log(data);
 })

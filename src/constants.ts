@@ -50,4 +50,30 @@ enum Languages{
     zh_TW = "zh_TW"
 }
 
-export { Region, LeadboardRegion, Languages};
+enum Queue {
+    RankedSolo5x5 = "RANKED_SOLO_5x5",
+    RankedTFT = "RANKED_TFT",
+    RankedFlexSR = "RANKED_FLEX_SR",
+    RankedFlexTT = "RANKED_FLEX_TT"
+}
+
+enum Tier {
+    Challenger = "CHALLENGER",
+    Grandmaster = "GRANDMASTER",
+    Master = "MASTER",
+    Diamond = "DIAMOND",
+    Platinum = "PLATINUM",
+    Gold = "GOLD",
+    Silver = "SILVER",
+    Bronze = "BRONZE",
+    Iron = "IRON"
+}
+
+enum Division {
+    I = "I",
+    II = "II",
+    III = "III",
+    IV = "IV"
+}
+
+export { Region, LeadboardRegion, Languages, Queue, Tier, Division};
