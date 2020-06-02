@@ -1,6 +1,6 @@
 import { Riot, Region, LeadboardRegion, Languages, Queue, Tier, Division} from './mod.ts';
 
-let riot = new Riot("RGAPI-7b205af6-82a4-4868-85dd-a330d7360db5");
+let riot = new Riot("XXX");
 
 riot.summoner.getSummonerByName("Plankson", Region.BR1).then((data) => {
     console.log(data);
