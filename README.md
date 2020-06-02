@@ -44,11 +44,8 @@ Everything should be in the same order as in the official docs.
 - [x] `Get the grandmaster league of a specific queue.`
 - [x] `Get league with given ID, including inactive entries.`
 - [x] `Get the master league for given queue.`
-
 ## LEAGUE EXP
-
- - [x] `Get all the league entries`
-
+- [x] `Get all the league entries`
 ## LOL-STATUS-V3
 - [x] `Get League of Legends status for the given shard.`
 ## SPECTATOR-V4
