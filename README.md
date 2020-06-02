@@ -47,7 +47,7 @@ Everything should be in the same order as in the official docs.
 
 ## LEAGUE EXP
 
- - [x]   Get all the league entries
+ - [x] `Get all the league entries`
 
 ## LOL-STATUS-V3
 - [x] `Get League of Legends status for the given shard.`
