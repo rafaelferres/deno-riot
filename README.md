@@ -5,7 +5,7 @@ League of legends api wrapper
 # Simple example
 LOL:
 ```js
-import  {  Riot,  Region }  from  './mod.ts';
+import  {  Riot,  Region }  from  'https://deno.land/x/deno_riot/mod.ts';
 
 const riot  =  new  Riot("API_KEY");
 
