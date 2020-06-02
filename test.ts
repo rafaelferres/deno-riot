@@ -2,60 +2,59 @@ import { Riot, Region, LeadboardRegion, Languages, Queue, Tier, Division} from '
 
 let riot = new Riot("RGAPI-7b205af6-82a4-4868-85dd-a330d7360db5");
 
-/*
-riot.summoner.byName("Plankson", Region.BR1).then((data) => {
+riot.summoner.getSummonerByName("Plankson", Region.BR1).then((data) => {
     console.log(data);
 });
 
-riot.summoner.byAccountId("qaUljVmzA3WVJn8k6uztwFGyDwBWDmH5J2HA3wK2Xxw336A", Region.BR1).then((data) =>{
+riot.summoner.getSummonerByAccountId("qaUljVmzA3WVJn8k6uztwFGyDwBWDmH5J2HA3wK2Xxw336A", Region.BR1).then((data) =>{
     console.log(data);
 })
 
-riot.summoner.byPuuid("y-lJrZX8zV_-0guWmG1kCNd3b1doBu3avSC5s5c0xva5k8x8v5328qXoqCuJwb6ICgqhA__7d7od1A", Region.BR1).then((data) =>{
+riot.summoner.getSummonerByPuuid("y-lJrZX8zV_-0guWmG1kCNd3b1doBu3avSC5s5c0xva5k8x8v5328qXoqCuJwb6ICgqhA__7d7od1A", Region.BR1).then((data) =>{
     console.log(data);
 })
 
-riot.summoner.byEncryptedSummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) => {
+riot.summoner.getSummonerByEncryptedSummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) => {
     console.log(data);
 });
 
-riot.spectator.byEncryptedSummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) => {
+riot.spectator.getCurrentGameByEncryptedSummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) => {
     console.log(data);
 });
 
-riot.spectator.featuredGames(Region.BR1).then((data) => {
+riot.spectator.getFeaturedGames(Region.BR1).then((data) => {
     console.log(data);
 })
 
-riot.ranked.leaderboards(LeadboardRegion.Americas).then((data) => {
+riot.ranked.getLeaderboards(LeadboardRegion.Americas).then((data) => {
     console.log(data);
 })
 
-riot.status.shardData(Region.BR1).then((data) => {
+riot.status.getShardData(Region.BR1).then((data) => {
     console.log(data);
 })
 
-riot.champion.championRotations(Region.BR1).then((data) => {
+riot.champion.getChampionRotations(Region.BR1).then((data) => {
     console.log(data);
 });
 
-riot.champion.champions(Languages.pt_BR).then((data) => {
+riot.champion.getChampions(Languages.pt_BR).then((data) => {
     console.log(data);
 });
 
-riot.championMastery.byEncryptedSummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) => {
+riot.championMastery.getByEncryptedSummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) => {
     console.log(data);
 });
 
-riot.championMastery.byEncryptedSummonerIdChampionId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", 141, Region.BR1).then((data) => {
+riot.championMastery.getByEncryptedSummonerIdChampionId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", 141, Region.BR1).then((data) => {
     console.log(data);
 });
 
-riot.championMastery.scoreByEncryptedSummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) =>{
+riot.championMastery.getScoreByEncryptedSummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) =>{
     console.log(data);
 });
 
-riot.exp.getAllLeague(Queue.RankedSolo5x5, Tier.Gold, Division.III).then((data) => {
+riot.exp.getAllLeague(Queue.RankedSolo5x5, Tier.Gold, Division.III, Region.BR1).then((data) => {
     console.log(data);
 })
 
@@ -65,4 +64,12 @@ riot.clash.getPlayer("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR
 
 riot.clash.getAllTournaments(Region.BR1).then((data) => {
     console.log(data);
-});*/
+});
+
+riot.league.getChallangerLeagueByQueue(Queue.RankedSolo5x5, Region.BR1).then((data) => {
+    console.log(data);
+});
+
+riot.league.getLeagueBySummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) => {
+    console.log(data);
+});
