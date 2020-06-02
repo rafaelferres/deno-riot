@@ -97,3 +97,23 @@ riot.league.getLeagueById("qwdmDKWkdqkwjndkjqnk", Region.BR1).then((data) => {
 riot.league.getMasterLeagueByQueue(Queue.RankedSolo5x5, Region.BR1).then((data) => {
     console.log(data);
 });
+
+riot.match.getMatchIdByTournamentCode("123456" , Region.BR1).then((data) => {
+    console.log(data);
+});
+
+riot.match.getMatchById(123456, Region.BR1).then((data) => {
+    console.log(data);
+});
+
+riot.match.getMatchByTournamentCode(123456, "123456", Region.BR1).then((data) => {
+    console.log(data);
+});
+
+riot.match.getMatchesBySummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) => {
+    console.log(data);
+})
+
+riot.match.getMatchTimelineById(123456, Region.BR1).then((data) => {
+    console.log(data);
+})

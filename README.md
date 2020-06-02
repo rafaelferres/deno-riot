@@ -32,11 +32,11 @@ Everything should be in the same order as in the official docs.
 - [x] `Retrieve all champions.`
 - [x] `Retrieve champion by ID.`
 ## MATCH-V4
-- [ ] `Get matches id by tournament code`
-- [ ] `Get match by id`
-- [ ] `Get match by tournament code`
-- [ ] `Get matches by summoner id`
-- [ ] `Get match timeline by id`
+- [x] `Get matches id by tournament code`
+- [x] `Get match by id`
+- [x] `Get match by tournament code`
+- [x] `Get matches by summoner id`
+- [x] `Get match timeline by id`
 ## LEAGUE-V4
 - [x] `Get the challenger league for given queue.`
 - [x] `Get league entries in all queues for a given summoner ID.`
