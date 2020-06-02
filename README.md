@@ -7,7 +7,7 @@ LOL:
 ```js
 import  {  Riot,  Region }  from  './mod.ts';
 
-const riot  =  new  Riot("XXX");
+const riot  =  new  Riot("API_KEY");
 
 riot.summoner.getSummonerByName("Plankson",  Region.BR1).then((data)  =>  {
 	console.log(data);
