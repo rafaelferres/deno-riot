@@ -66,10 +66,34 @@ riot.clash.getAllTournaments(Region.BR1).then((data) => {
     console.log(data);
 });
 
+riot.clash.getTeamById("DqndknkqwNJKDX", Region.BR1).then((data) => {
+    console.log(data);
+})
+
+riot.clash.getTournamentsByTeamId("oidqwd4q4dqw484", Region.BR1).then((data) => {
+    console.log(data);
+});
+
 riot.league.getChallangerLeagueByQueue(Queue.RankedSolo5x5, Region.BR1).then((data) => {
     console.log(data);
 });
 
 riot.league.getLeagueBySummonerId("mMJZj2mbolYcL0NX1JJIM78V7irhTa92L77E1Vf2RHx3hA", Region.BR1).then((data) => {
     console.log(data);
+});;
+
+riot.league.getAllLeagueEntries(Queue.RankedSolo5x5, Tier.Diamond, Division.III, Region.BR1).then((data) => {
+    console.log(data);
 });
+
+riot.league.getGrandmasterLeagueByQueue(Queue.RankedSolo5x5, Region.BR1).then((data) => {
+    console.log(data);
+})
+
+riot.league.getLeagueById("qwdmDKWkdqkwjndkjqnk", Region.BR1).then((data) => {
+    console.log(data);
+});
+
+riot.league.getMasterLeagueByQueue(Queue.RankedSolo5x5, Region.BR1).then((data) => {
+    console.log(data);
+})
